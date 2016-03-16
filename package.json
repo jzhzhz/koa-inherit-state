@@ -1,0 +1,35 @@
+{
+  "name": "koa-inherit-state",
+  "version": "1.0.0",
+  "description": "Make context.state inherits app.context.state",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "standard",
+    "unit": "mocha",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "test": "npm run lint && npm run unit && npm run cover",
+    "travis": "npm run lint && npm run cover && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gerhut/koa-inherit-state.git"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "George Chung <Gerhut@GMail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gerhut/koa-inherit-state/issues"
+  },
+  "homepage": "https://github.com/Gerhut/koa-inherit-state#readme",
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.2",
+    "koa": "^1.2.0",
+    "mocha": "^2.4.5",
+    "should": "^8.2.2",
+    "standard": "^6.0.8",
+    "supertest": "^1.2.0"
+  }
+}
