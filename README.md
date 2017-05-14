@@ -1,5 +1,6 @@
 # koa-inherit-state
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Gerhut/koa-inherit-state.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Gerhut/koa-inherit-state.svg?branch=master)](https://travis-ci.org/Gerhut/koa-inherit-state)
 [![codecov.io](https://codecov.io/github/Gerhut/koa-inherit-state/coverage.svg?branch=master)](https://codecov.io/github/Gerhut/koa-inherit-state?branch=master)
 [![Dependency Status](https://david-dm.org/gerhut/koa-inherit-state.svg)](https://david-dm.org/gerhut/koa-inherit-state)
