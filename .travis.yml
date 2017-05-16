@@ -1,5 +1,15 @@
 language: node_js
-node_js:
-  - "5"
-  - "4"
+matrix:
+  include:
+  - node_js: "lts/argon"
+    env: KOA_VERSION=1
+  - node_js: "lts/boron"
+    env: KOA_VERSION=1
+  - node_js: "stable"
+    env: KOA_VERSION=1
+  - node_js: "stable"
+    env: KOA_VERSION=2
+before_script:
+  - npm remove koa
+  - npm install koa@$KOA_VERSION
 script: npm run travis

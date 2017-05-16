@@ -2,14 +2,14 @@
 'use strict'
 
 const should = require('should')
-const koa = require('koa')
+const Koa = require('koa')
 const request = require('supertest')
 
 const inheritState = require('..')
 
 describe('koa-inherit-state', function () {
   it('this.state in middleware will inherit app.context.state', function (done) {
-    const app = koa()
+    const app = new Koa()
     app.context.state = { 'foo': 'bar' }
     app.use(inheritState())
     app.use(function * () {
@@ -22,7 +22,7 @@ describe('koa-inherit-state', function () {
   })
 
   it('different context.state will not affect others', function (done) {
-    const app = koa()
+    const app = new Koa()
     app.context.state = { 'foo': 'bar' }
     app.use(inheritState())
     app.use(function * () {
