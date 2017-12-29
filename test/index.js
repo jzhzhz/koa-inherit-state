@@ -1,6 +1,7 @@
 /* eslint-env mocha */
 'use strict'
 
+const http = require('http')
 const should = require('should')
 const Koa = require('koa')
 const request = require('supertest')
@@ -17,7 +18,7 @@ describe('koa-inherit-state', function () {
       this.status = 204
     })
 
-    request(app.listen()).get('/')
+    request(app.callback()).get('/')
       .expect(204).end(done)
   })
 
@@ -30,7 +31,7 @@ describe('koa-inherit-state', function () {
       this.status = 204
     })
 
-    const server = app.listen()
+    const server = http.createServer(app.callback())
     request(server).get('/')
       .expect(204).end((err) => {
         if (err) return done(err)
