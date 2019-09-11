@@ -11,7 +11,7 @@ const inheritState = require('..')
 describe('koa-inherit-state', function () {
   it('this.state in middleware will inherit app.context.state', function (done) {
     const app = new Koa()
-    app.context.state = { 'foo': 'bar' }
+    app.context.state = { foo: 'bar' }
     app.use(inheritState())
     app.use(function * () {
       should(this.state.foo).be.equal('bar')
@@ -24,7 +24,7 @@ describe('koa-inherit-state', function () {
 
   it('different context.state will not affect others', function (done) {
     const app = new Koa()
-    app.context.state = { 'foo': 'bar' }
+    app.context.state = { foo: 'bar' }
     app.use(inheritState())
     app.use(function * () {
       should(this.state.foo).be.equal('bar')
